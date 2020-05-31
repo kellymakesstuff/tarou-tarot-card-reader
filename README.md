@@ -2,7 +2,7 @@
 Everyday insight through tarot cards.
 
 - [Project Planning](#project-planning)
-  - [Tarou.](#overview)
+  - [Overview](#overview)
   - [Wireframes](#wireframes)
   - [MVP](#mvp)
     - [Goals](#goals)
@@ -18,7 +18,7 @@ Everyday insight through tarot cards.
   - [Code Issues & Resolutions](#code-issues--resolutions)
 
 
-##overview
+### Overview
 <br>
 Tarou. Tarot Card Reader
 
@@ -81,7 +81,7 @@ Tarou is a desktop and mobile-compatible app that does one-card and three-card t
 
 #### Data
 
-> Use the Data Section to define the API(s) you will be consuming for your project, inluding sample URL queries.
+> Data will be utilized from the Tarot API. A working API call can be found in the App.js file in this repo. 
 
 |    API     | Quality Docs? | Website       | Sample Query                            |
 | :--------: | :-----------: | :------------ | :-------------------------------------- |
