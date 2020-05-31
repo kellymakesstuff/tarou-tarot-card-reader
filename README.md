@@ -1,6 +1,6 @@
 ![Star Girl](https://media.giphy.com/media/8lOsZwQ9wLnhu/giphy.gif)
 # Tarou.
-*Figuring it all the eff out through Tarot Cards.*
+*Everyday Insight through Tarot Cards.*
 
 - [Project Planning](#project-planning)
   - [Overview](#overview)
