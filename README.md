@@ -153,18 +153,13 @@ src
 
 > Use this section to go into further depth regarding your components, including breaking down the components as stateless or stateful, and considering the passing of data between those components.
 
-|  Component   |    Type    | State | Props | Description                                                      |
+|  Component   |    Type    | State | Props | Description |                                                     
 | :----------: | :--------: | :---: | :---: | :--------------------------------------------------------------- |
-|    Header    | functional |   n   |   n   | _The header will contain the navigation and logo._               |
-|  Control  | functional |   n   |   n   | _Control pabnel will house options like "flip card", "shuffle", "reset", and the type of spread._       |
-|
-|   CardDisplay    |   class    |   y   |   n   | _The component that will display each card image._ |
-|
+|    Header    | functional |   n   |   n   | _The header will contain the navigation and logo._ |            
+|  Control  | functional |   n   |   n   | _Control pabnel will house options like "flip card", "shuffle", "reset", and the type of spread._  |      
+|   CardDisplay    |   class    |   y   |   n   | _The component that will display each card image._ 
 |   OneCard    |   class    |   y   |   n   | _Houses one instance of the CardDisplay component._      |
-|
-| ThreeCard | functional |   n   |   y   | _Houses three instances of the CardDisplay component._  |               |
-|    SpreadDescription   | functional |   n   |   n   | _Displays the description of each card below the displayed card._ |
-|
+| ThreeCard | functional |   n   |   y   | _Houses three instances of the CardDisplay component._  |               |    SpreadDescription   | functional |   n   |   n   | _Displays the description of each card below the displayed card._ |
 |    CardDetail   | functional |   n   |   n   | _The footer will show info about me and a link to my portfolio._ |
 
 <br>
