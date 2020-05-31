@@ -1,5 +1,5 @@
 # Tarou.
-#Everyday insight through tarot cards.
+##Everyday insight through tarot cards.
 
 - [Project Planning](#project-planning)
   - [Overview](#overview)
@@ -18,7 +18,7 @@
   - [Code Issues & Resolutions](#code-issues--resolutions)
 
 
-Tarou. Tarot Card Reader
+###Tarou. Tarot Card Reader
 
 Tarou is a desktop and mobile-compatible app that does one-card and three-card tarot card readings. Rather than trying to see the future, tarot is meant to give you a new perspective on your past, your present, and your potential, and a mental space to explore that in. Flip one card for a gratitude of the day, or do a three-card spread to explore what's working and what isn't in your current world, and what you can do to refocus. 
 <br>
@@ -158,11 +158,11 @@ src
 |    Header    | functional |   n   |   n   | _The header will contain the navigation and logo._               |
 |  Control  | functional |   n   |   n   | _Control pabnel will house options like "flip card", "shuffle", "reset", and the type of spread._       |
 |
-|   CardDisplay    |   class    |   y   |   n   | _The component that will display each card image._
+|   CardDisplay    |   class    |   y   |   n   | _The component that will display each card image._ |
 |
 |   OneCard    |   class    |   y   |   n   | _Houses one instance of the CardDisplay component._      |
 |
-| ThreeCard | functional |   n   |   y   | _Houses three instances of the CardDisplay component._                 |
+| ThreeCard | functional |   n   |   y   | _Houses three instances of the CardDisplay component._  |               |
 |    SpreadDescription   | functional |   n   |   n   | _Displays the description of each card below the displayed card._ |
 |
 |    CardDetail   | functional |   n   |   n   | _The footer will show info about me and a link to my portfolio._ |
