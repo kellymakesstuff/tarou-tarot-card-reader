@@ -156,16 +156,14 @@ src
 
 #### Component Breakdown
 
-> Use this section to go into further depth regarding your components, including breaking down the components as stateless or stateful, and considering the passing of data between those components.
-
 |  Component   |    Type    | State | Props | Description |                                                     
 | :----------: | :--------: | :---: | :---: | :--------------------------------------------------------------- |
 |    Header    | functional |   n   |   n   | _The header will contain the navigation and logo._ |            
 |  Control  | functional |   n   |   n   | _Control pabnel will house options like "flip card", "shuffle", "reset", and the type of spread._  |      
-|   CardDisplay    |   class    |   y   |   n   | _The component that will display each card image._ 
-|   OneCard    |   class    |   y   |   n   | _Houses one instance of the CardDisplay component._      |
-| ThreeCard | functional |   n   |   y   | _Houses three instances of the CardDisplay component._  |               |    SpreadDescription   | functional |   n   |   n   | _Displays the description of each card below the displayed card._ |
-|    CardDetail   | functional |   n   |   n   | _The footer will show info about me and a link to my portfolio._ |
+|   CardDisplay    |   class    |   y   |   y   | _The component that will display each card image._ 
+|   OneCard    |   class    |   y   |   y   | _Houses one instance of the CardDisplay component._      |
+| ThreeCard | functional |   y   |   y   | _Houses three instances of the CardDisplay component._  |               |    SpreadDescription   | functional |   y   |   y   | _Displays the description of each card below the displayed card._ |
+|    CardDetail   | functional |   y   |   y   | _The full detail page for each card (through router)_ |
 
 <br>
 
@@ -173,13 +171,14 @@ src
 
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Add header    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
-| Add control panel |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| Create individual card |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| One-card configuration function |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| Three-card configuration function |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| Routed info page setup |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| TOTAL               |          |     6 hrs      |     3 hrs     |     TBD     |
+| Add header    |    L     |     2 hrs      |     TBD    |    TBD    |
+| Add control panel |    H     |     4 hrs      |     TBD     |     TBD     |
+| Create individual card |    H     |     3 hrs      |     TBD    |     TBD     |
+| One-card configuration function |    M     |     4 hrs      |   TBD   |     TBD     |
+| Three-card configuration function |    H     |     5 hrs      |     TBD    |     TBD     |
+| Routed info page setup |    M     |     4 hrs      |    TBD     |     TBD     |
+| CSS and Styling |    M     |     4 hrs      |    TBD     |     TBD     |
+| TOTAL               |          |     26 hrs      |     TBD     |     TBD     |
 
 <br>
 
