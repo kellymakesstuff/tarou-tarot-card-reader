@@ -1,4 +1,4 @@
-![Star Girl](https://media.giphy.com/media/3ornjSRFHJVXF6BF8k/source.gif)
+![Star Girl](https://media.giphy.com/media/8lOsZwQ9wLnhu/giphy.gif)
 # Tarou.
 *Figuring it all the eff out through Tarot Cards.*
 
