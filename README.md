@@ -30,29 +30,9 @@ Tarou is a desktop and mobile-compatible app that does one-card and three-card t
 
 ### Wireframes
 
-![Dummy Link](url)
+![Wireframes](https://i.imgur.com/x8c0VjY.png)
 
-- Desktop Landing
-
-![Dummy Link](url)
-
-- Desktop Body
-
-![Dummy Link](url)
-
-- Desktop Resource Index
-
-![Dummy Link](url)
-
-- Desktop Resource Show
-
-![Dummy Link](url)
-
-- Tablet Resource Index
-
-![Dummy Link](url)
-
-- Mobile Resource Index
+- Desktop, mobile, and tablet configuratons (three-card spread)
 
 <br>
 
