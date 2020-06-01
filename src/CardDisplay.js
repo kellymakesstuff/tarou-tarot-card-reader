@@ -3,11 +3,13 @@ import React from 'react'
 
 function CardDisplay(props) {
 
-  console.log(props)
+  console.log("props length", props.className)
 
   function imgFlip() {
+
+
     let randomNum = Math.random()
-    if (randomNum < .5) {
+    if (randomNum < .5 || props.className === "oneSelect") {
       return <div><img alt={props.name} src={props.image} />
         <p>{props.upright}</p>
       </div>
