@@ -16,7 +16,7 @@ function CardDisplay(props) {
   }
   return (
     <div>
-      <h2>{props.name}</h2>
+      <h2>ff {props.name}</h2>
       {imgFlip()}
     </div >
   )
