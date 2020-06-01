@@ -49,6 +49,7 @@ Tarou is a desktop and mobile-compatible app that does one-card and three-card t
 - App can take a user-input question to display for three-card spreads
 - App can route to individual info pages for each card
 - Card components can be shuffled, reversed, and randomized
+- JEST testing
 
 <br>
 
@@ -173,6 +174,8 @@ src
 ### Post-MVP
 
 - CSS coloring and styling reacts dynamically to card suits, configurations 
+- Card flip animation
+- Additional information views in spread-mode
 
 <br>
 
