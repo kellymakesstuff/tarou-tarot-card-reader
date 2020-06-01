@@ -7,9 +7,12 @@ function CardDisplay(props) {
 
   function imgFlip() {
 
-
     let randomNum = Math.random()
-    if (randomNum < .5 || props.className === "oneSelect") {
+    if (props.className === "oneSelect") {
+      return <div><img alt={props.name} src={props.image} />
+        <p>{props.summary}</p>
+      </div>
+    } else if (randomNum < .5) {
       return <div><img alt={props.name} src={props.image} />
         <p>{props.upright}</p>
       </div>
