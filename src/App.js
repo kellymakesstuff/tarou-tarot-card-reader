@@ -1,36 +1,61 @@
-import React, { useState, useEffect } from 'react'
-import axios from "axios"
-import CardDisplay from "./CardDisplay"
+import React from 'react'
 import "./App.css"
+import OneSelect from "./OneSelect"
+import ThreeSelect from "./ThreeSelect"
+import { Link, Route } from "react-router-dom"
 
 
-let fullUrl = "https://tarot.howlcode.com/api/v1/cards"
-let threeCard = "https://tarot.howlcode.com/api/v1/spreads/three_cards"
-let oneCard = "https://tarot.howlcode.com/api/v1/spreads/random_card"
+// let fullUrl = "https://tarot.howlcode.com/api/v1/cards"
+// let threeCard = "https://tarot.howlcode.com/api/v1/spreads/three_cards"
+// let oneCard = "https://tarot.howlcode.com/api/v1/spreads/random_card"
+// // let newUrl;
+// // let oneSelect;
+
 
 export default function App() {
-  const [cards, updateCards] = useState([])
+  // const [cards, updateCards] = useState([])
 
+  // useEffect(() => {
+  //   const FullCall = async () => {
+  //     const cards = await axios(threeCard)
+  //     updateCards(cards.data)
+  //     console.log(cards.data)
+  //   }
 
-  useEffect(() => {
-    const apiCall = async () => {
-      const cards = await axios(threeCard)
-      updateCards(cards.data)
-      console.log(cards.data)
-    }
-    apiCall()
+  //   FullCall()
+  //   // oneSelect = function oneSelect() {
+  //   //   console.log('one')
+  //   //   newUrl = "https://tarot.howlcode.com/api/v1/spreads/random_card";
+  //   //   FullCall()
+  //   // }
 
-  }, [])
+  //   // function threeSelect() {
+  //   //   newUrl = "https://tarot.howlcode.com/api/v1/spreads/three_cards";
+  //   //   FullCall()
+  //   // }
+  // }, [])
 
 
   return (
     <div>
-      <h1>Three Cards</h1>
-      <br />
-      <div className="cardBox">
-        {cards.map(card => <CardDisplay key={card.id} name={card.name} summary={card.summary} full_meaning={card.full_meaning} id={card.id}
-          image={card.image} reversed={card.reversed} upright={card.upright} />)}
-      </div>
-    </div>
+
+      <header>
+        <Link to="/" exact>Home</Link>
+        <Link to="/oneselect" exact>one</Link>
+        <Link to="/threeselect" exact>three</Link>
+      </header>
+      <main>
+
+        <Route path="/oneselect">
+          <OneSelect />
+        </Route>
+
+        <Route path="/threeselect">
+          <ThreeSelect />
+        </Route>
+
+      </main>
+
+    </div >
   )
 }

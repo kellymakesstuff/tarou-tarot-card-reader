@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 
 
 function CardDisplay(props) {
@@ -8,11 +8,11 @@ function CardDisplay(props) {
   function imgFlip() {
     let randomNum = Math.random()
     if (randomNum < .5) {
-      return <div><img src={props.image} />
+      return <div><img alt={props.name} src={props.image} />
         <p>{props.upright}</p>
       </div>
     } else {
-      return <div><img className="flipImg" src={props.image} />
+      return <div><img className="flipImg" alt={props.name} src={props.image} />
         <p>Reversed: {props.reversed}</p>
       </div>
     }
