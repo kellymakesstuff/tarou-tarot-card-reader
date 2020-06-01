@@ -176,6 +176,7 @@ src
 - CSS coloring and styling reacts dynamically to card suits, configurations 
 - Card flip animation
 - Additional information views in spread-mode
+- Two-card spread option
 
 <br>
 
