@@ -8,15 +8,19 @@ function CardDisplay(props) {
   function imgFlip() {
     let randomNum = Math.random()
     if (randomNum < .5) {
-      return <img src={props.image} />
+      return <div><img src={props.image} />
+        <p>{props.upright}</p>
+      </div>
     } else {
-      return <img className="flipImg" src={props.image} />
+      return <div><img className="flipImg" src={props.image} />
+        <p>Reversed: {props.reversed}</p>
+      </div>
     }
 
   }
   return (
     <div>
-      <h2>ff {props.name}</h2>
+      <h2>{props.name}</h2>
       {imgFlip()}
     </div >
   )
