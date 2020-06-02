@@ -41,7 +41,7 @@ function OneSelect() {
         <h1>One Card</h1>
         <br />
         <div className="cardBox">
-          {cards.map(card => <CardDisplay className="oneSelect" key={card.id} name={card.name} summary={card.summary} full_meaning={card.full_meaning} id={card.id}
+          {cards.map(card => <CardDisplay className="oneSelect" key={card.id} name={card.name.replace('-', ' ').replace('-', ' ')} summary={card.summary} full_meaning={card.full_meaning} id={card.id}
             image={card.image} reversed={card.reversed} upright={card.upright} />)}
         </div>
       </main>

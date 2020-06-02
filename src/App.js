@@ -41,8 +41,8 @@ export default function App() {
 
       <header>
         <Link to="/" exact>Home</Link>
-        <Link to="/oneselect" exact>one</Link>
-        <Link to="/threeselect" exact>three</Link>
+        <Link to="/oneselect">one</Link>
+        <Link to="/threeselect">three</Link>
       </header>
       <main>
 
