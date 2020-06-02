@@ -7,17 +7,60 @@ import { Link, Route, withRouter } from "react-router-dom"
 let threeCard = "https://tarot.howlcode.com/api/v1/spreads/three_cards"
 
 function ThreeSelect() {
-  const [cards, updateCards] = useState([])
+  let [cards, updateCards] = useState([])
+  let [message, updateMessage] = useState("question")
+  let [currentCounter, updateCounter] = useState(0)
 
   useEffect(() => {
-    const FullCall = async () => {
-      const cards = await axios(threeCard)
-      updateCards(cards.data)
-      console.log(cards.data)
-    }
+
 
     FullCall()
-    // oneSelect = function oneSelect() {
+
+  }, [])
+
+
+  const FullCall = async () => {
+    let cards = await axios(threeCard)
+    updateCards(cards.data)
+    console.log(cards.data)
+    cardReveal()
+  }
+
+
+  function cardReveal() {
+    return <>
+      {cards.map(card => <CardDisplay key={card.id} name={card.name.replace('-', ' ').replace('-', ' ')} summary={card.summary} full_meaning={card.full_meaning} id={card.id}
+        image={card.image} reversed={card.reversed} upright={card.upright} />)}
+    </>
+  }
+
+  return (
+    <div>
+
+      <main>
+        <h1>Three Cards</h1>
+        <br />
+
+        <button onClick={() => { FullCall() }}>button</button>
+        <input type="text" onChange={event => updateMessage(event.target.value)} />
+        <h2>{message}</h2>
+
+        <div className="cardBox">
+          {cardReveal()}
+
+        </div>
+      </main>
+
+    </div >
+  )
+}
+
+export default withRouter(ThreeSelect)
+
+
+
+
+   // oneSelect = function oneSelect() {
     //   console.log('one')
     //   newUrl = "https://tarot.howlcode.com/api/v1/spreads/random_card";
     //   FullCall()
@@ -27,23 +70,3 @@ function ThreeSelect() {
     //   newUrl = "https://tarot.howlcode.com/api/v1/spreads/three_cards";
     //   FullCall()
     // }
-  }, [])
-
-
-  return (
-    <div>
-
-      <main>
-        <h1>Three Cards</h1>
-        <br />
-        <div className="cardBox">
-          {cards.map(card => <CardDisplay key={card.id} name={card.name.replace('-', ' ').replace('-', ' ')} summary={card.summary} full_meaning={card.full_meaning} id={card.id}
-            image={card.image} reversed={card.reversed} upright={card.upright} />)}
-        </div>
-      </main>
-
-    </div >
-  )
-}
-
-export default withRouter(ThreeSelect)

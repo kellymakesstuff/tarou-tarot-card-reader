@@ -9,15 +9,25 @@ function CardDisplay(props) {
 
     let randomNum = Math.random()
     if (props.className === "oneSelect") {
-      return <div><img alt={props.name} src={props.image} />
+      return <div>
+        <h2>{props.name}</h2>
+        <img alt={props.name} src={props.image} />
         <p>{props.summary}</p>
       </div>
+    } else if (props.className === "allCards") {
+      return <div>
+        <img alt={props.name} src={props.image} />
+      </div>
     } else if (randomNum < .5) {
-      return <div><img alt={props.name} src={props.image} />
+      return <div>
+        <h2>{props.name}</h2>
+        <img alt={props.name} src={props.image} />
         <p>{props.upright}</p>
       </div>
     } else {
-      return <div><img className="flipImg" alt={props.name} src={props.image} />
+      return <div>
+        <h2>{props.name}</h2>
+        <img className="flipImg" alt={props.name} src={props.image} />
         <p>Reversed: {props.reversed}</p>
       </div>
     }
@@ -25,7 +35,6 @@ function CardDisplay(props) {
   }
   return (
     <div>
-      <h2>{props.name}</h2>
       {imgFlip()}
     </div >
   )

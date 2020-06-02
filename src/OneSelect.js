@@ -11,26 +11,15 @@ function OneSelect() {
   const [cards, updateCards] = useState([])
 
   useEffect(() => {
-    const FullCall = async () => {
-      const cards = await axios(oneCard)
-      updateCards(cards.data)
-      console.log(cards.data)
-    }
-
     FullCall()
-    // oneSelect = function oneSelect() {
-    //   console.log('one')
-    //   newUrl = "https://tarot.howlcode.com/api/v1/spreads/random_card";
-    //   FullCall()
-    // }
 
-    // function threeSelect() {
-    //   newUrl = "https://tarot.howlcode.com/api/v1/spreads/three_cards";
-    //   FullCall()
-    // }
   }, [])
 
-
+  const FullCall = async () => {
+    const cards = await axios(oneCard)
+    updateCards(cards.data)
+    console.log(cards.data)
+  }
 
   return (
     <div>
@@ -39,6 +28,7 @@ function OneSelect() {
 
 
         <h1>One Card</h1>
+        <button onClick={() => { FullCall() }}>button</button>
         <br />
         <div className="cardBox">
           {cards.map(card => <CardDisplay className="oneSelect" key={card.id} name={card.name.replace('-', ' ').replace('-', ' ')} summary={card.summary} full_meaning={card.full_meaning} id={card.id}
