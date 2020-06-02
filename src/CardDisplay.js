@@ -3,7 +3,7 @@ import React from 'react'
 
 function CardDisplay(props) {
 
-  console.log("props length", props.className)
+
 
   function imgFlip() {
 

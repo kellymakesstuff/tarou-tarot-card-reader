@@ -29,7 +29,7 @@ function ThreeSelect() {
 
   function cardReveal() {
     return <>
-      {cards.map(card => <CardDisplay key={card.id} name={card.name.replace('-', ' ').replace('-', ' ')} summary={card.summary} full_meaning={card.full_meaning} id={card.id}
+      {cards.map(card => <CardDisplay key={card.name} name={card.name.replace('-', ' ').replace('-', ' ')} summary={card.summary} full_meaning={card.full_meaning} id={card.id}
         image={card.image} reversed={card.reversed} upright={card.upright} />)}
     </>
   }
