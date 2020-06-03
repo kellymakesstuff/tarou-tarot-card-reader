@@ -10,6 +10,7 @@ let fullUrl = "https://tarot.howlcode.com/api/v1/cards"
 
 function AllCards() {
   const [cards, updateCards] = useState([])
+  let [chosen, updateChosen] = useState(0)
 
   useEffect(() => {
     FullCall()
@@ -19,7 +20,12 @@ function AllCards() {
   const FullCall = async () => {
     const cards = await axios(fullUrl)
     updateCards(cards.data)
-    console.log("before return", cards.data)
+    console.log("before return", cards.data[2])
+  }
+
+  function cardNum(num) {
+    updateChosen(num)
+    console.log(chosen)
   }
 
   return (
@@ -30,16 +36,17 @@ function AllCards() {
 
       <h1>All Cards</h1>
       <br />
-      <div className="cardBox">
+      <div className="cardBoxAll">
         {cards.map(cards => <>
-          <Link to={`/allcards/${cards.name}`}>
+          <Link to={`/allcards/${cards.id}`}>
             <CardDisplay className="allCards" key={cards.name} name={cards.name.replace('-', ' ').replace('-', ' ')} summary={cards.summary} full_meaning={cards.full_meaning} id={cards.id}
               image={cards.image} reversed={cards.reversed} upright={cards.upright} />
           </Link>
+          <Route path={`/allcards/${cards.id}`} exact><CardDetailFull data={cards} /></Route>
         </>
         )}
       </div>
-      <Route path="/allcards/:name" exact><CardDetailFull /></Route>
+
 
 
 

@@ -7,6 +7,15 @@
   margin: 0 auto;
 }
 
+.cardBoxAll {
+  display:flex;
+  width: 90%;
+  flex-flow: row;
+  justify-content: space-between;
+margin: 0 auto;
+
+}
+
 .flipImg {
     transform: scale(-1, -1);
 }
@@ -16,3 +25,4 @@ img {
   height:524px;
   border: 5px solid darkslategray;
 }
+
