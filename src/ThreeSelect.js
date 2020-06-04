@@ -29,8 +29,7 @@ function ThreeSelect() {
 
   function cardReveal() {
     return <>
-      {cards.map(card => <CardDisplay key={card.name} name={card.name.replace('-', ' ').replace('-', ' ')} summary={card.summary} full_meaning={card.full_meaning} id={card.id}
-        image={card.image} reversed={card.reversed} upright={card.upright} />)}
+
     </>
   }
 
@@ -46,7 +45,8 @@ function ThreeSelect() {
         <h2>{message}</h2>
 
         <div className="cardBox">
-          {cardReveal()}
+          {cards.map(card => <CardDisplay key={card.name} name={card.name.replace('-', ' ').replace('-', ' ')} summary={card.summary} full_meaning={card.full_meaning} id={card.id}
+            image={card.image} reversed={card.reversed} upright={card.upright} />)}
 
         </div>
       </main>
