@@ -9,12 +9,23 @@
 
 .cardBoxAll {
   display:flex;
-  width: 90%;
+  width: 1505px;
   flex-flow: row;
   justify-content: space-between;
 margin: 0 auto;
-
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-points-x: repeat(300px);
+  scroll-snap-type: mandatory;
 }
+
+.cardBoxAll > div {
+  flex-shrink: 0;
+  width: 300px;
+  height: 550px;
+}
+
+
 
 .flipImg {
     transform: scale(-1, -1);
@@ -26,3 +37,76 @@ img {
   border: 5px solid darkslategray;
 }
 
+.img:hover {
+  border: 5px solid red;
+}
+
+.delay {
+  transition-property: fadeIn;
+  transition-duration: 5s;
+  transition-delay: 4s;
+  
+    animation: fadeIn ease 1s;
+    -webkit-animation: fadeIn ease 1s;
+    -moz-animation: fadeIn ease 1s;
+    -o-animation: fadeIn ease 1s;
+    -ms-animation: fadeIn ease 1s;
+    
+}
+
+
+.fade-in {
+  animation: fadeIn ease 4s;
+  -webkit-animation: fadeIn ease 4s;
+  -moz-animation: fadeIn ease 4s;
+  -o-animation: fadeIn ease 4s;
+  -ms-animation: fadeIn ease 4s;
+  }
+  @keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+  }
+  
+  @-moz-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+  }
+  
+  @-webkit-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+  }
+  
+  @-o-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+  }
+  
+  @-ms-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+  }
+
+
+  html {
+    background: linear-gradient(-45deg, #d3f4ff, #e7a4e4,#b2dffb, #c355f5,#dcffcc);
+    background-size: 3000% 3000%;
+    animation: gradient 500s ease infinite;
+  }
+  
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+
+  /* Fade-in credit: https://blog.hubspot.com/website/css-fade-in */
+  /* .cardBoxAll carousel credit: https://mediatemple.net/blog/design-creative/carousels-dont-have-to-be-complicated/ */
+  /* background gradient credit: https://codepen.io/P1N2O/pen/pyBNzX */

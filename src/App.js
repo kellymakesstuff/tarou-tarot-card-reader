@@ -39,37 +39,37 @@ export default function App() {
         <Link to="/allcards">all cards</Link>
       </header>
 
-      <main>
-        <Route path="/" exact>
-          <Home />
-        </Route>
 
-        <Route path="/oneoption">
-          <OneOption />
-        </Route>
+      <Route path="/" exact>
+        <Home />
+      </Route>
 
-        <Route path="/threeoption">
-          <ThreeOption question={question} updateQuestion={updateQuestion} />
-        </Route>
+      <Route path="/oneoption">
+        <OneOption />
+      </Route>
 
-        <Route path="/oneselect">
-          <OneSelect />
-        </Route>
+      <Route path="/threeoption">
+        <ThreeOption question={question} updateQuestion={updateQuestion} />
+      </Route>
 
-        <Route path="/threequestion">
-          <ThreeQuestion question={question} updateQuestion={updateQuestion} />
-        </Route>
+      <Route path="/oneselect">
+        <OneSelect />
+      </Route>
 
-        <Route path="/threeselect">
-          <ThreeSelect question={question} updateQuestion={updateQuestion} />
-        </Route>
+      <Route path="/threequestion">
+        <ThreeQuestion question={question} updateQuestion={updateQuestion} />
+      </Route>
 
-        <Route path="/allcards">
-          <AllCards />
-        </Route>
+      <Route path="/threeselect">
+        <ThreeSelect question={question} updateQuestion={updateQuestion} />
+      </Route>
+
+      <Route path="/allcards">
+        <AllCards />
+      </Route>
 
 
-      </main>
+
 
     </div >
   )

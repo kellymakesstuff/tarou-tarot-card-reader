@@ -17,7 +17,7 @@ function CardDetailFull(props) {
   return <>
     {
       SelectedCard && < div >
-        <h1>test {SelectedCard.name}</h1>
+        <h1>{SelectedCard.name.replace('-', ' ').replace('-', ' ')}</h1>
 
       </div >
     }

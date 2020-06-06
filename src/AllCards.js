@@ -23,16 +23,12 @@ function AllCards() {
     console.log("before return", cards.data[2])
   }
 
-  function cardNum(num) {
-    updateChosen(num)
-    console.log(chosen)
-  }
 
   return <div>
-    <Route path="/allcards" exact><div>
+    <Route path="/allcards"><div>
       <h1>All Cards</h1>
       <br />
-      <div className="cardBoxAll">
+      <div className="cardBoxAll slider">
         {cards.map(cards => <div>
           <Link to={`/allcards/${cards.id}`}>
             <CardDisplay className="allCards" key={cards.name} name={cards.name.replace('-', ' ').replace('-', ' ')} summary={cards.summary} full_meaning={cards.full_meaning} id={cards.id}
@@ -40,6 +36,7 @@ function AllCards() {
           </Link>
         </div>)}
       </div></div></Route>
+
     <Route path="/allcards/:id" exact><CardDetailFull data={cards} /></Route>
 
 
