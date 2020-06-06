@@ -4,7 +4,8 @@ import OneSelect from "./OneSelect"
 import ThreeSelect from "./ThreeSelect"
 import { Link, Route } from "react-router-dom"
 import AllCards from "./AllCards"
-
+import OneOption from "./OneOption"
+import ThreeOption from "./ThreeOption"
 
 // let fullUrl = "https://tarot.howlcode.com/api/v1/cards"
 // let threeCard = "https://tarot.howlcode.com/api/v1/spreads/three_cards"
@@ -23,30 +24,27 @@ export default function App() {
   //     console.log(cards.data)
   //   }
 
-  //   FullCall()
-  //   // oneSelect = function oneSelect() {
-  //   //   console.log('one')
-  //   //   newUrl = "https://tarot.howlcode.com/api/v1/spreads/random_card";
-  //   //   FullCall()
-  //   // }
-
-  //   // function threeSelect() {
-  //   //   newUrl = "https://tarot.howlcode.com/api/v1/spreads/three_cards";
-  //   //   FullCall()
-  //   // }
-  // }, [])
-
 
   return (
     <div>
-
       <header>
         <Link to="/" exact>Home</Link>
-        <Link to="/oneselect">one</Link>
-        <Link to="/threeselect">three</Link>
         <Link to="/allcards">all cards</Link>
       </header>
       <main>
+        <Link className="floatingTitle" to="/oneoption">one</Link>
+        <Link className="floatingTitle" to="/threeoption">three</Link>
+        <Link className="floatingTitle" to="/allcards">all cards</Link>
+
+        <Route path="/oneoption">
+          <OneOption />
+        </Route>
+
+        <Route path="/threeoption">
+          <ThreeOption />
+        </Route>
+
+
 
         <Route path="/oneselect">
           <OneSelect />
