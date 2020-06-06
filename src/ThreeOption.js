@@ -9,9 +9,10 @@ import ThreeQuestion from "./ThreeQuestion"
 
 
 
-function ThreeOption() {
+function ThreeOption({ question, updateQuestion }) {
 
-  let [message, updateMessage] = useState("question")
+  console.log("three options props", question)
+  console.log("three option updae q", updateQuestion)
   return (
     <div>
       <h2>Three: Option 1</h2>
@@ -19,9 +20,7 @@ function ThreeOption() {
 
       <Link className="floatingTitle" to="/threequestion">three</Link>
 
-      <Route path="/threequestion">
-        <ThreeQuestion />
-      </Route>
+
     </div>
   )
 }

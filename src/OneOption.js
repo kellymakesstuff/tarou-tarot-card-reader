@@ -7,8 +7,9 @@ import AllCards from "./AllCards"
 import ThreeOption from "./ThreeOption"
 
 
-function OneOption() {
+function OneOption(props) {
 
+  console.log("one option props", props)
 
   return (
     <div>

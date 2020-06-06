@@ -4,19 +4,22 @@ import CardDisplay from "./CardDisplay"
 import "./App.css"
 import { Link, Route, withRouter } from "react-router-dom"
 import ThreeSelect from "./ThreeSelect"
+import ThreeOption from "./ThreeOption"
 
-function ThreeQuestion() {
-  let [message, updateMessage] = useState("question")
+function ThreeQuestion({ question, updateQuestion }) {
+
+  console.log("three queston props", question)
+  console.log("three queston updae q", updateQuestion)
 
   return (
     <div>
-      <input type="text" onChange={event => updateMessage(event.target.value)} />
-      <h2>{message}</h2>
+      <input type="text" onChange={event => updateQuestion(event.target.value)} />
+      <h2>{question}</h2>
 
       <Link to="/threeselect">reveal threeSelect</Link>
 
       <Route path="/threeselect">
-        <ThreeSelect message={message} />
+        <ThreeSelect question={question} />
       </Route>
     </div>
   )

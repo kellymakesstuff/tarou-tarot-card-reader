@@ -9,8 +9,9 @@ import ThreeOption from "./ThreeOption"
 let oneCard = "https://tarot.howlcode.com/api/v1/spreads/random_card"
 
 
-function OneSelect() {
+function OneSelect(props) {
   const [cards, updateCards] = useState([])
+  console.log("one option props", props)
 
   useEffect(() => {
     FullCall()

@@ -8,7 +8,8 @@ let threeCard = "https://tarot.howlcode.com/api/v1/spreads/three_cards"
 
 function ThreeSelect(props) {
   let [cards, updateCards] = useState([])
-  console.log("threeSelect propsssss", props.message)
+  console.log("threeSelect propsssss", props)
+
   useEffect(() => {
 
 
@@ -38,7 +39,7 @@ function ThreeSelect(props) {
         <h1>Three Cards</h1>
         <br />
 
-        <h2>{props.message}</h2>
+        <h2>{props.question}</h2>
         <div className="cardBox">
           {cards.map(card => <CardDisplay key={card.name} name={card.name.replace('-', ' ').replace('-', ' ')} summary={card.summary} full_meaning={card.full_meaning} id={card.id}
             image={card.image} reversed={card.reversed} upright={card.upright} />)}

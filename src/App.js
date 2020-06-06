@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import "./App.css"
 import OneSelect from "./OneSelect"
 import ThreeSelect from "./ThreeSelect"
@@ -17,6 +17,8 @@ import ThreeQuestion from "./ThreeQuestion"
 
 
 export default function App() {
+  let [question, updateQuestion] = useState("enter question here")
+
   // const [cards, updateCards] = useState([])
 
   // useEffect(() => {
@@ -47,7 +49,7 @@ export default function App() {
         </Route>
 
         <Route path="/threeoption">
-          <ThreeOption />
+          <ThreeOption question={question} updateQuestion={updateQuestion} />
         </Route>
 
         <Route path="/oneselect">
@@ -55,11 +57,11 @@ export default function App() {
         </Route>
 
         <Route path="/threequestion">
-          <ThreeQuestion />
+          <ThreeQuestion question={question} updateQuestion={updateQuestion} />
         </Route>
 
         <Route path="/threeselect">
-          <ThreeSelect />
+          <ThreeSelect question={question} updateQuestion={updateQuestion} />
         </Route>
 
         <Route path="/allcards">
