@@ -40,10 +40,11 @@ function ThreeSelect() {
         <h1>Three Cards</h1>
         <br />
 
-        <button onClick={() => { FullCall() }}>button</button>
         <input type="text" onChange={event => updateMessage(event.target.value)} />
-        <h2>{message}</h2>
+        <button onClick={() => { FullCall() }}>button</button>
 
+
+        <h2>{message}</h2>
         <div className="cardBox">
           {cards.map(card => <CardDisplay key={card.name} name={card.name.replace('-', ' ').replace('-', ' ')} summary={card.summary} full_meaning={card.full_meaning} id={card.id}
             image={card.image} reversed={card.reversed} upright={card.upright} />)}

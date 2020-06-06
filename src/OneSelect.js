@@ -3,6 +3,8 @@ import axios from "axios"
 import CardDisplay from "./CardDisplay"
 import "./App.css"
 import { Link, Route, withRouter } from "react-router-dom"
+import OneOption from "./OneOption"
+import ThreeOption from "./ThreeOption"
 
 let oneCard = "https://tarot.howlcode.com/api/v1/spreads/random_card"
 

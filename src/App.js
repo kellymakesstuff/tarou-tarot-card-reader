@@ -6,6 +6,7 @@ import { Link, Route } from "react-router-dom"
 import AllCards from "./AllCards"
 import OneOption from "./OneOption"
 import ThreeOption from "./ThreeOption"
+import Home from "./Home"
 
 // let fullUrl = "https://tarot.howlcode.com/api/v1/cards"
 // let threeCard = "https://tarot.howlcode.com/api/v1/spreads/three_cards"
@@ -30,11 +31,15 @@ export default function App() {
       <header>
         <Link to="/" exact>Home</Link>
         <Link to="/allcards">all cards</Link>
+        <Link to="/oneoption">one</Link>
+        <Link to="/threeoption">three</Link>
+        <Link to="/allcards">all cards</Link>
       </header>
+
       <main>
-        <Link className="floatingTitle" to="/oneoption">one</Link>
-        <Link className="floatingTitle" to="/threeoption">three</Link>
-        <Link className="floatingTitle" to="/allcards">all cards</Link>
+        <Route path="/" exact>
+          <Home />
+        </Route>
 
         <Route path="/oneoption">
           <OneOption />
@@ -45,7 +50,6 @@ export default function App() {
         </Route>
 
 
-
         <Route path="/oneselect">
           <OneSelect />
         </Route>
@@ -54,9 +58,11 @@ export default function App() {
           <ThreeSelect />
         </Route>
 
+
         <Route path="/allcards">
           <AllCards />
         </Route>
+
 
       </main>
 
