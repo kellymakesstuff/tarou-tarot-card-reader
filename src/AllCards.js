@@ -29,23 +29,18 @@ function AllCards() {
   }
 
   return <div>
-
-
-
-
-    <h1>All Cards</h1>
-    <br />
-    <div className="cardBoxAll">
-      {cards.map(cards => <div>
-        <Link to={`/allcards/${cards.id}`}>
-          <CardDisplay className="allCards" key={cards.name} name={cards.name.replace('-', ' ').replace('-', ' ')} summary={cards.summary} full_meaning={cards.full_meaning} id={cards.id}
-            image={cards.image} reversed={cards.reversed} upright={cards.upright} />
-        </Link>
-
-      </div>)}
-      <Route path="/allcards/{id}" exact><CardDetailFull data={cards} /></Route>
-    </div>
-
+    <Route path="/allcards" exact><div>
+      <h1>All Cards</h1>
+      <br />
+      <div className="cardBoxAll">
+        {cards.map(cards => <div>
+          <Link to={`/allcards/${cards.id}`}>
+            <CardDisplay className="allCards" key={cards.name} name={cards.name.replace('-', ' ').replace('-', ' ')} summary={cards.summary} full_meaning={cards.full_meaning} id={cards.id}
+              image={cards.image} reversed={cards.reversed} upright={cards.upright} />
+          </Link>
+        </div>)}
+      </div></div></Route>
+    <Route path="/allcards/:id" exact><CardDetailFull data={cards} /></Route>
 
 
 

@@ -6,13 +6,22 @@ import { Link, Route, withRouter } from "react-router-dom"
 
 
 function CardDetailFull(props) {
-  console.log(props)
-  return (
-    <div>
-      <h1>test {props.data.name}</h1>
+  console.log(props, "CardDetailFull")
 
-    </div >
-  )
+  const SelectedCard = props.data.find(card => {
+    return card.id == props.match.params.id
+  })
+
+  console.log(SelectedCard, "selected card")
+
+  return <>
+    {
+      SelectedCard && < div >
+        <h1>test {SelectedCard.name}</h1>
+
+      </div >
+    }
+  </>
 }
 
 export default withRouter(CardDetailFull)

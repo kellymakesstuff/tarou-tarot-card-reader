@@ -7,6 +7,7 @@ import AllCards from "./AllCards"
 import OneOption from "./OneOption"
 import ThreeOption from "./ThreeOption"
 import Home from "./Home"
+import ThreeQuestion from "./ThreeQuestion"
 
 // let fullUrl = "https://tarot.howlcode.com/api/v1/cards"
 // let threeCard = "https://tarot.howlcode.com/api/v1/spreads/three_cards"
@@ -49,15 +50,17 @@ export default function App() {
           <ThreeOption />
         </Route>
 
-
         <Route path="/oneselect">
           <OneSelect />
+        </Route>
+
+        <Route path="/threequestion">
+          <ThreeQuestion />
         </Route>
 
         <Route path="/threeselect">
           <ThreeSelect />
         </Route>
-
 
         <Route path="/allcards">
           <AllCards />

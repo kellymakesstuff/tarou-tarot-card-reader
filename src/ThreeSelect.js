@@ -6,11 +6,9 @@ import { Link, Route, withRouter } from "react-router-dom"
 
 let threeCard = "https://tarot.howlcode.com/api/v1/spreads/three_cards"
 
-function ThreeSelect() {
+function ThreeSelect(props) {
   let [cards, updateCards] = useState([])
-  let [message, updateMessage] = useState("question")
-  let [currentCounter, updateCounter] = useState(0)
-
+  console.log("threeSelect propsssss", props.message)
   useEffect(() => {
 
 
@@ -40,11 +38,7 @@ function ThreeSelect() {
         <h1>Three Cards</h1>
         <br />
 
-        <input type="text" onChange={event => updateMessage(event.target.value)} />
-        <button onClick={() => { FullCall() }}>button</button>
-
-
-        <h2>{message}</h2>
+        <h2>{props.message}</h2>
         <div className="cardBox">
           {cards.map(card => <CardDisplay key={card.name} name={card.name.replace('-', ' ').replace('-', ' ')} summary={card.summary} full_meaning={card.full_meaning} id={card.id}
             image={card.image} reversed={card.reversed} upright={card.upright} />)}
