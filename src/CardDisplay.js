@@ -10,7 +10,7 @@ function CardDisplay(props) {
     let randomNum = Math.random()
     if (props.className === "oneSelect") {
       return <div className="fade-in">
-        <h2>{props.name}</h2>
+        <h4>{props.name}</h4>
         <img alt={props.name} src={props.image} />
         <p>{props.summary}</p>
       </div>
@@ -20,13 +20,13 @@ function CardDisplay(props) {
       </div>
     } else if (randomNum < .5) {
       return <div className="fade-in">
-        <h2>{props.name}</h2>
+        <h4>{props.name}</h4>
         <img alt={props.name} src={props.image} />
         <p>{props.upright}</p>
       </div>
     } else {
       return <div class="fade-in">
-        <h2>{props.name}</h2>
+        <h4>{props.name}</h4>
         <img className="flipImg" alt={props.name} src={props.image} />
         <p>Reversed: {props.reversed}</p>
       </div>
