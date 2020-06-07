@@ -17,15 +17,11 @@ function CardDetailFull(props) {
   return <>
     {
       SelectedCard && < div className="cardDetailBox" >
-
-        <img alt={SelectedCard.name} src={SelectedCard.image} />
-        <div className="cardDetailBoxInner">
-          <h2>{SelectedCard.name.replace('-', ' ').replace('-', ' ')}</h2>
-          <p>{SelectedCard.summary}</p>
-          <p>{SelectedCard.upright}</p>
-          <p>{SelectedCard.reversed}</p>
-        </div>
-      </div >
+        <h2>{SelectedCard.name.replace('-', ' ').replace('-', ' ')}</h2>
+        <p>{SelectedCard.summary}</p>
+        <p>{SelectedCard.upright}</p>
+        <p>{SelectedCard.reversed}</p>
+      </div>
     }
   </>
 }

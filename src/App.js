@@ -32,11 +32,11 @@ export default function App() {
   return (
     <div>
       <header>
-        <Link to="/" exact>Home</Link>
-        <Link to="/allcards">all cards</Link>
-        <Link to="/oneoption">one</Link>
-        <Link to="/threeoption">three</Link>
-        <Link to="/allcards">all cards</Link>
+        <h6>Tarou.</h6>
+        <Link className="header" to="/" exact>Home</Link>
+        <Link className="header" to="/oneoption">one</Link>
+        <Link className="header" to="/threeoption">three</Link>
+        <Link className="header" to="/allcards">all cards</Link>
       </header>
 
 
