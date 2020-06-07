@@ -26,8 +26,8 @@ function AllCards() {
 
   return <div>
     <Route path="/allcards"><div>
-      <h1>All Cards</h1>
-      <br />
+
+      <Route path="/allcards/:id" exact><CardDetailFull data={cards} /></Route>
       <div className="cardBoxAll slider">
         {cards.map(cards => <div>
           <Link to={`/allcards/${cards.id}`}>
@@ -37,7 +37,7 @@ function AllCards() {
         </div>)}
       </div></div></Route>
 
-    <Route path="/allcards/:id" exact><CardDetailFull data={cards} /></Route>
+
 
 
 

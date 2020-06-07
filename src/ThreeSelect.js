@@ -36,9 +36,6 @@ function ThreeSelect(props) {
     <div>
 
       <main>
-        <h1>Three Cards</h1>
-        <br />
-
         <h2>{props.question}</h2>
         <div className="cardBox">
           {cards.map(card => <CardDisplay key={card.name} name={card.name.replace('-', ' ').replace('-', ' ')} summary={card.summary} full_meaning={card.full_meaning} id={card.id}

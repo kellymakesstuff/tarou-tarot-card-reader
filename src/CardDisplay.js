@@ -16,7 +16,7 @@ function CardDisplay(props) {
       </div>
     } else if (props.className === "allCards") {
       return <div>
-        <img alt={props.name} src={props.image} />
+        <img className="smallImg" alt={props.name} src={props.image} />
       </div>
     } else if (randomNum < .5) {
       return <div className="fade-in">

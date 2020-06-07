@@ -1,10 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&display=swap');
+
+
+h2 {
+  font-family: 'Bad Script', cursive;
+  font-size: 40px;
+  text-align: center;
+}
 .cardBox {
   display:flex;
   width: 80%;
-  flex-flow: row wrap;
+  flex-flow: row;
   justify-content: space-between;
   text-align: center;
   margin: 0 auto;
+}
+
+.cardDetailBox {
+  display:flex;
+  flex-flow: row ;
+  justify-self: center;
+}
+
+.cardDetailBoxInner {
+  display: flex;
+  flex-flow: column wrap;
+  
 }
 
 .cardBoxAll {
@@ -37,8 +57,10 @@ img {
   border: 5px solid darkslategray;
 }
 
-.img:hover {
-  border: 5px solid red;
+.smallImg {
+  width:280px;
+  height:504px;
+  border: 5px solid darkslategray;
 }
 
 .delay {
