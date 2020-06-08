@@ -21,10 +21,14 @@
 
 ### Overview
 **Tarou. Tarot Card Reader**
+
+View on Netlify: ![Netlify](https://tarou.netlify.app/)
+
 <br>
 Tarou is a desktop and mobile-compatible app that does one-card and three-card tarot card readings. Rather than trying to see the future, tarot is meant to give you a new perspective on your past, your present, and your potential, and a mental space to explore that in. Flip one card for a gratitude of the day, or do a three-card spread to explore what's working and what isn't in your current world, and what you can do to refocus. Built for all us little wanderers trying to figure it out on this big rock.  
 
 ![Dog in Space](https://www.reactiongifs.com/wp-content/uploads/2013/11/I-have-no-idea-what-I-am-doing.gif)
+
 
 <br>
 
