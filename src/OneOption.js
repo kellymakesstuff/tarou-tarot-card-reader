@@ -7,18 +7,16 @@ import AllCards from "./AllCards"
 import ThreeOption from "./ThreeOption"
 
 
-function OneOption(props) {
+function OneOption({ oneSpreadOption, updateOneSpreadOption }) {
 
-  console.log("one option props", props)
+  console.log("one option props", oneSpreadOption[0])
 
   return (
     <div>
-      <h2>Option 1</h2>
-      <h2>Option 2</h2>
 
+      <Link className="floatingTitle fade-in" onClick={event => updateOneSpreadOption("daily intention")} to="/oneselect"><h2>{oneSpreadOption[0]}</h2></Link>
+      <Link className="floatingTitle fade-in" onClick={event => updateOneSpreadOption("daily gratitude")} to="/oneselect"><h2>{oneSpreadOption[1]}</h2></Link>
 
-
-      <Link className="floatingTitle" to="/oneselect">one</Link>
 
       <Route path="/oneselect">
         <OneSelect />

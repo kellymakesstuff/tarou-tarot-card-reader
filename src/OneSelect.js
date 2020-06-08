@@ -9,9 +9,8 @@ import ThreeOption from "./ThreeOption"
 let oneCard = "https://tarot.howlcode.com/api/v1/spreads/random_card"
 
 
-function OneSelect(props) {
+function OneSelect({ oneSpreadOption, updateOneSpreadOption }) {
   const [cards, updateCards] = useState([])
-  console.log("one option props", props)
 
   useEffect(() => {
     FullCall()
@@ -28,11 +27,13 @@ function OneSelect(props) {
     <div>
 
       <main>
-        <button onClick={() => { FullCall() }}>button</button>
+        <h2>{oneSpreadOption}</h2>
         <div className="cardBox">
           {cards.map(card => <CardDisplay className="oneSelect" key={card.name} name={card.name.replace('-', ' ').replace('-', ' ')} summary={card.summary} full_meaning={card.full_meaning} id={card.id}
             image={card.image} reversed={card.reversed} upright={card.upright} />)}
+          <button onClick={() => { FullCall() }}>draw another card</button>
         </div>
+
       </main>
 
     </div >

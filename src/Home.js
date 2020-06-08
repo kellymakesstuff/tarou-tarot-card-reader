@@ -26,10 +26,10 @@ function Home() {
 
 
   return <div>
-    <h2>home</h2>
-    <Link className="floatingTitle" to="/oneoption">one</Link>
-    <Link className="floatingTitle" to="/threeoption">three</Link>
-    <Link className="floatingTitle" to="/allcards">all cards</Link>
+    <h2>Choose your Path</h2>
+    <Link className="floatingTitle fade-in" to="/oneoption"><h4>one-card spread</h4></Link>
+    <Link className="floatingTitle fade-in" to="/threeoption"><h4>three-card spread</h4></Link>
+    <Link className="floatingTitle fade-in" to="/allcards"><h4>all cards</h4></Link>
 
   </div>
 }

@@ -18,6 +18,7 @@ import ThreeQuestion from "./ThreeQuestion"
 
 export default function App() {
   let [question, updateQuestion] = useState("enter question here")
+  let [oneSpreadOption, updateOneSpreadOption] = useState(["daily intention", "daily gratitude"])
 
   // const [cards, updateCards] = useState([])
 
@@ -33,8 +34,8 @@ export default function App() {
     <div>
       <header>
         <h6>Tarou.</h6>
-        <Link className="header" to="/" exact>Home</Link>
-        <Link className="header" to="/oneoption">one</Link>
+        <Link className="header" to="/" exact>home</Link>
+        <Link className="header" onClick={event => updateOneSpreadOption(["daily intention", "daily gratitude"])} to="/oneoption">one</Link>
         <Link className="header" to="/threeoption">three</Link>
         <Link className="header" to="/allcards">all cards</Link>
       </header>
@@ -45,7 +46,7 @@ export default function App() {
       </Route>
 
       <Route path="/oneoption">
-        <OneOption />
+        <OneOption oneSpreadOption={oneSpreadOption} updateOneSpreadOption={updateOneSpreadOption} />
       </Route>
 
       <Route path="/threeoption">
@@ -53,7 +54,7 @@ export default function App() {
       </Route>
 
       <Route path="/oneselect">
-        <OneSelect />
+        <OneSelect oneSpreadOption={oneSpreadOption} updateOneSpreadOption={updateOneSpreadOption} />
       </Route>
 
       <Route path="/threequestion">
