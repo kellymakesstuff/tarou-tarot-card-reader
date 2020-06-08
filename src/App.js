@@ -17,9 +17,9 @@ import ThreeQuestion from "./ThreeQuestion"
 
 
 export default function App() {
-  let [question, updateQuestion] = useState("enter question here")
+  let [question, updateQuestion] = useState("what is your question?")
   let [oneSpreadOption, updateOneSpreadOption] = useState(["daily intention", "daily gratitude"])
-  let [threeSpreadOption, updateThreeSpreadOption] = useState(["problem, cause, solution", ["problem", "cause", "solution"], "I think, I feel, I do", ["I think", "I feel", "I do"], "past, present, potential", ["past", "present", "potential"]])
+  let [threeSpreadOption, updateThreeSpreadOption] = useState(["problem, cause, solution", ["problem", "cause", "solution"], "i think, i feel, i do", ["i think", "i feel", "i do"], "past, present, potential", ["past", "present", "potential"]])
 
   // const [cards, updateCards] = useState([])
 
