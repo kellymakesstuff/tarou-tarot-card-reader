@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-function CardDisplay(props) {
+function CardDisplay(props,{ threeSpreadOption, updateThreeSpreadOption }) {
 
 
 
@@ -20,14 +20,14 @@ function CardDisplay(props) {
       </div>
     } else if (randomNum < .5) {
       return <div className="fade-in">
-        <h4>{props.name}</h4>
         <img alt={props.name} src={props.image} />
+        <p>{props.name}</p>
         <p>{props.upright}</p>
       </div>
     } else {
       return <div class="fade-in">
-        <h4>{props.name}</h4>
         <img className="flipImg" alt={props.name} src={props.image} />
+        <p>{props.name}</p>
         <p>Reversed: {props.reversed}</p>
       </div>
     }

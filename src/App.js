@@ -19,6 +19,7 @@ import ThreeQuestion from "./ThreeQuestion"
 export default function App() {
   let [question, updateQuestion] = useState("enter question here")
   let [oneSpreadOption, updateOneSpreadOption] = useState(["daily intention", "daily gratitude"])
+  let [threeSpreadOption, updateThreeSpreadOption] = useState(["problem, cause, solution", ["problem", "cause", "solution"], "I think, I feel, I do", ["I think", "I feel", "I do"], "past, present, potential", ["past", "present", "potential"]])
 
   // const [cards, updateCards] = useState([])
 
@@ -36,7 +37,7 @@ export default function App() {
         <h6>Tarou.</h6>
         <Link className="header" to="/" exact>home</Link>
         <Link className="header" onClick={event => updateOneSpreadOption(["daily intention", "daily gratitude"])} to="/oneoption">one</Link>
-        <Link className="header" to="/threeoption">three</Link>
+        <Link className="header" onClick={event => updateThreeSpreadOption(["problem, cause, solution", ["problem", "cause", "solution"], "I think, I feel, I do", ["I think", "I feel", "I do"], "past, present, potential", ["past", "present", "potential"]])} to="/threeoption">three</Link>
         <Link className="header" to="/allcards">all cards</Link>
       </header>
 
@@ -50,7 +51,7 @@ export default function App() {
       </Route>
 
       <Route path="/threeoption">
-        <ThreeOption question={question} updateQuestion={updateQuestion} />
+        <ThreeOption question={question} updateQuestion={updateQuestion} threeSpreadOption={threeSpreadOption} updateThreeSpreadOption={updateThreeSpreadOption} />
       </Route>
 
       <Route path="/oneselect">
@@ -58,11 +59,11 @@ export default function App() {
       </Route>
 
       <Route path="/threequestion">
-        <ThreeQuestion question={question} updateQuestion={updateQuestion} />
+        <ThreeQuestion question={question} updateQuestion={updateQuestion} threeSpreadOption={threeSpreadOption} updateThreeSpreadOption={updateThreeSpreadOption} />
       </Route>
 
       <Route path="/threeselect">
-        <ThreeSelect question={question} updateQuestion={updateQuestion} />
+        <ThreeSelect question={question} updateQuestion={updateQuestion} threeSpreadOption={threeSpreadOption} updateThreeSpreadOption={updateThreeSpreadOption} />
       </Route>
 
       <Route path="/allcards">

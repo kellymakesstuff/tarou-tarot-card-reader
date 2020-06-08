@@ -9,16 +9,15 @@ import ThreeQuestion from "./ThreeQuestion"
 
 
 
-function ThreeOption({ question, updateQuestion }) {
+function ThreeOption({ question, updateQuestion, threeSpreadOption, updateThreeSpreadOption }) {
 
-  console.log("three options props", question)
-  console.log("three option updae q", updateQuestion)
+  console.log("three options props", threeSpreadOption)
+
   return (
     <div>
-      <h2>Three: Option 1</h2>
-      <h2>Three: Option 2</h2>
-
-      <Link className="floatingTitle" to="/threequestion">three</Link>
+      <Link to="/threequestion"><h2 className="fade-in" onClick={event => updateThreeSpreadOption(threeSpreadOption[1])}>{threeSpreadOption[0]}</h2></Link>
+      <Link to="/threequestion"><h2 className="fade-in" onClick={event => updateThreeSpreadOption(threeSpreadOption[3])}>{threeSpreadOption[2]}</h2></Link>
+      <Link to="/threequestion"><h2 className="fade-in" onClick={event => updateThreeSpreadOption(threeSpreadOption[5])}>{threeSpreadOption[4]}</h2></Link>
 
 
     </div>

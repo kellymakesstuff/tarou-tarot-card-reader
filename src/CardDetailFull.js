@@ -18,9 +18,9 @@ function CardDetailFull(props) {
     {
       SelectedCard && < div className="cardDetailBox" >
         <h2>{SelectedCard.name.replace('-', ' ').replace('-', ' ')}</h2>
-        <p>{SelectedCard.summary}</p>
-        <p>{SelectedCard.upright}</p>
-        <p>{SelectedCard.reversed}</p>
+        <p>Summary: {SelectedCard.summary}</p>
+        <p>Upright meaning: {SelectedCard.upright}</p>
+        <p>Reversed meaning: {SelectedCard.reversed}</p>
       </div>
     }
   </>

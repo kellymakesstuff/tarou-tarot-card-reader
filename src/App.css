@@ -70,6 +70,26 @@ button {
   margin: 0 auto;
 }
 
+.cardBoxThree {
+  display:flex;
+  width: 90%;
+  flex-flow: row;
+  align-items: center;
+  justify-content: space-between;
+  justify-content: space-evenly;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.threeOptionTitles {
+  display:flex;
+  width: 90%;
+  flex-flow: row;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  margin: 0 auto;
+}
 .cardDetailBox {
   display:flex;
   flex-flow: column wrap ;
@@ -80,7 +100,9 @@ margin: 0 auto;
 
 }
 
-
+body {
+  text-align: center;
+}
 
 .cardBoxAll {
   display:flex;

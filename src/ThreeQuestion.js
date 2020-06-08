@@ -6,21 +6,18 @@ import { Link, Route, withRouter } from "react-router-dom"
 import ThreeSelect from "./ThreeSelect"
 import ThreeOption from "./ThreeOption"
 
-function ThreeQuestion({ question, updateQuestion }) {
+function ThreeQuestion({ question, updateQuestion, threeSpreadOption, updateThreeSpreadOption }) {
 
-  console.log("three queston props", question)
-  console.log("three queston updae q", updateQuestion)
+  console.log("three queston props", threeSpreadOption)
 
   return (
     <div>
-      <input type="text" onChange={event => updateQuestion(event.target.value)} />
       <h2>{question}</h2>
 
-      <Link to="/threeselect">reveal threeSelect</Link>
+      <input type="text" onChange={event => updateQuestion(event.target.value)} />
+      <Link to="/threeselect" threeSpreadOption={threeSpreadOption} updateThreeSpreadOption={updateThreeSpreadOption}><h4>draw cards</h4></Link>
 
-      <Route path="/threeselect">
-        <ThreeSelect question={question} />
-      </Route>
+
     </div>
   )
 }
