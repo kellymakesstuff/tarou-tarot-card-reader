@@ -10,7 +10,6 @@ let fullUrl = "https://tarot.howlcode.com/api/v1/cards"
 
 function AllCards() {
   const [cards, updateCards] = useState([])
-  let [chosen, updateChosen] = useState(0)
 
   useEffect(() => {
     FullCall()
@@ -20,7 +19,6 @@ function AllCards() {
   const FullCall = async () => {
     const cards = await axios(fullUrl)
     updateCards(cards.data)
-    console.log("before return", cards.data[2])
   }
 
 

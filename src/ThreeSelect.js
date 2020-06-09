@@ -9,7 +9,6 @@ let threeCard = "https://tarot.howlcode.com/api/v1/spreads/three_cards"
 function ThreeSelect({ question, threeSpreadOption }) {
   let [cards, updateCards] = useState([])
 
-  console.log("threeSelect propsssss", threeSpreadOption)
 
   useEffect(() => {
 
@@ -22,7 +21,6 @@ function ThreeSelect({ question, threeSpreadOption }) {
   const FullCall = async () => {
     let cards = await axios(threeCard)
     updateCards(cards.data)
-    console.log(cards.data)
     cardReveal()
   }
 
@@ -58,15 +56,3 @@ function ThreeSelect({ question, threeSpreadOption }) {
 export default withRouter(ThreeSelect)
 
 
-
-
-   // oneSelect = function oneSelect() {
-    //   console.log('one')
-    //   newUrl = "https://tarot.howlcode.com/api/v1/spreads/random_card";
-    //   FullCall()
-    // }
-
-    // function threeSelect() {
-    //   newUrl = "https://tarot.howlcode.com/api/v1/spreads/three_cards";
-    //   FullCall()
-    // }

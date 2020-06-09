@@ -5,7 +5,7 @@ import { Link, withRouter } from "react-router-dom"
 
 function ThreeQuestion({ question, updateQuestion, threeSpreadOption, updateThreeSpreadOption }) {
 
-  console.log("three queston props", threeSpreadOption)
+
 
   return (
     <div>

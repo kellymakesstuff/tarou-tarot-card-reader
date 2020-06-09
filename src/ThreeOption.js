@@ -5,7 +5,6 @@ import { Link, withRouter } from "react-router-dom"
 
 function ThreeOption({ threeSpreadOption, updateThreeSpreadOption }) {
 
-  console.log("three options props", threeSpreadOption)
 
   return (
     <div>

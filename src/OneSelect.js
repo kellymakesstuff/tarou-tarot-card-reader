@@ -18,7 +18,6 @@ function OneSelect({ oneSpreadOption }) {
   const FullCall = async () => {
     const cards = await axios(oneCard)
     updateCards(cards.data)
-    console.log(cards.data)
   }
 
   return (

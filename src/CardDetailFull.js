@@ -10,7 +10,6 @@ function CardDetailFull(props) {
     return card.id == props.match.params.id
   })
 
-  console.log(SelectedCard, "selected card")
 
   return <>
     {

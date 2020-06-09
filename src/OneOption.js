@@ -7,7 +7,6 @@ import { Link, Route, withRouter } from "react-router-dom"
 
 function OneOption({ oneSpreadOption, updateOneSpreadOption }) {
 
-  console.log("one option props", oneSpreadOption[0])
 
   return (
     <div>
