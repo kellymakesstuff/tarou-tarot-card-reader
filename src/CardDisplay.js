@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-function CardDisplay(props,{ threeSpreadOption, updateThreeSpreadOption }) {
+function CardDisplay(props) {
 
 
 

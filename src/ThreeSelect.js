@@ -2,11 +2,11 @@ import React, { useState, useEffect } from 'react'
 import axios from "axios"
 import CardDisplay from "./CardDisplay"
 import "./App.css"
-import { Link, Route, withRouter } from "react-router-dom"
+import { withRouter } from "react-router-dom"
 
 let threeCard = "https://tarot.howlcode.com/api/v1/spreads/three_cards"
 
-function ThreeSelect({ question, threeSpreadOption, updateThreeSpreadOption }) {
+function ThreeSelect({ question, threeSpreadOption }) {
   let [cards, updateCards] = useState([])
 
   console.log("threeSelect propsssss", threeSpreadOption)

@@ -1,15 +1,9 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import "./App.css"
-import OneSelect from "./OneSelect"
-import ThreeSelect from "./ThreeSelect"
-import { Link, Route, withRouter } from "react-router-dom"
-import AllCards from "./AllCards"
-import OneOption from "./OneOption"
-import ThreeQuestion from "./ThreeQuestion"
+import { Link, withRouter } from "react-router-dom"
 
 
-
-function ThreeOption({ question, updateQuestion, threeSpreadOption, updateThreeSpreadOption }) {
+function ThreeOption({ threeSpreadOption, updateThreeSpreadOption }) {
 
   console.log("three options props", threeSpreadOption)
 

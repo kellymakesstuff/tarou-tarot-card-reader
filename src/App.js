@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import "./App.css"
 import OneSelect from "./OneSelect"
 import ThreeSelect from "./ThreeSelect"
@@ -9,26 +9,10 @@ import ThreeOption from "./ThreeOption"
 import Home from "./Home"
 import ThreeQuestion from "./ThreeQuestion"
 
-// let fullUrl = "https://tarot.howlcode.com/api/v1/cards"
-// let threeCard = "https://tarot.howlcode.com/api/v1/spreads/three_cards"
-// let oneCard = "https://tarot.howlcode.com/api/v1/spreads/random_card"
-// // let newUrl;
-// // let oneSelect;
-
-
 export default function App() {
   let [question, updateQuestion] = useState("what is your question?")
   let [oneSpreadOption, updateOneSpreadOption] = useState(["daily intention", "daily gratitude"])
   let [threeSpreadOption, updateThreeSpreadOption] = useState(["problem, cause, solution", ["problem", "cause", "solution"], "i think, i feel, i do", ["i think", "i feel", "i do"], "past, present, potential", ["past", "present", "potential"]])
-
-  // const [cards, updateCards] = useState([])
-
-  // useEffect(() => {
-  //   const FullCall = async () => {
-  //     const cards = await axios(threeCard)
-  //     updateCards(cards.data)
-  //     console.log(cards.data)
-  //   }
 
 
   return (

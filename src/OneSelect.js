@@ -2,14 +2,12 @@ import React, { useState, useEffect } from 'react'
 import axios from "axios"
 import CardDisplay from "./CardDisplay"
 import "./App.css"
-import { Link, Route, withRouter } from "react-router-dom"
-import OneOption from "./OneOption"
-import ThreeOption from "./ThreeOption"
+import { withRouter } from "react-router-dom"
 
 let oneCard = "https://tarot.howlcode.com/api/v1/spreads/random_card"
 
 
-function OneSelect({ oneSpreadOption, updateOneSpreadOption }) {
+function OneSelect({ oneSpreadOption }) {
   const [cards, updateCards] = useState([])
 
   useEffect(() => {

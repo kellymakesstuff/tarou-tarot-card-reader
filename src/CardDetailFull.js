@@ -1,8 +1,6 @@
-import React, { useState, useEffect } from 'react'
-import axios from "axios"
-import CardDisplay from "./CardDisplay"
+import React from 'react'
 import "./App.css"
-import { Link, Route, withRouter } from "react-router-dom"
+import { withRouter } from "react-router-dom"
 
 
 function CardDetailFull(props) {

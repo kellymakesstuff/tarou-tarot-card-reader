@@ -1,10 +1,8 @@
 import React from 'react'
 import "./App.css"
 import OneSelect from "./OneSelect"
-import ThreeSelect from "./ThreeSelect"
 import { Link, Route, withRouter } from "react-router-dom"
-import AllCards from "./AllCards"
-import ThreeOption from "./ThreeOption"
+
 
 
 function OneOption({ oneSpreadOption, updateOneSpreadOption }) {
