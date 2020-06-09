@@ -156,14 +156,14 @@ src
 
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Add header    |    L     |     2 hrs      |     TBD    |    TBD    |
-| Add control panel |    H     |     4 hrs      |     TBD     |     TBD     |
-| Create individual card |    H     |     3 hrs      |     TBD    |     TBD     |
-| One-card configuration function |    M     |     4 hrs      |   TBD   |     TBD     |
-| Three-card configuration function |    H     |     5 hrs      |     TBD    |     TBD     |
-| Routed info page setup |    M     |     4 hrs      |    TBD     |     TBD     |
-| CSS and Styling |    M     |     4 hrs      |    TBD     |     TBD     |
-| TOTAL               |          |     26 hrs      |     TBD     |     TBD     |
+| Add header    |    L     |     2 hrs      |     TBD    |    1 hr    |
+| Add control panel |    H     |     4 hrs      |     TBD     |    changed     |
+| Create individual card |    H     |     3 hrs      |     TBD    |     2 hrs     |
+| One-card configuration function |    M     |     4 hrs      |   TBD   |     7hrs     |
+| Three-card configuration function |    H     |     5 hrs      |     TBD    |     9 hrs     |
+| Routed info page setup |    M     |     4 hrs      |    TBD     |     4 hrs     |
+| CSS and Styling |    M     |     4 hrs      |    TBD     |     5 hrs     |
+| TOTAL               |          |     26 hrs      |     TBD     |     28 hrs     |
 
 <br>
 
@@ -190,12 +190,41 @@ src
 
 ### Code Showcase
 
-> To be updated upon project completion. 
+I wanted to be able to keep the card display all in one component, which I was able to do by using an "if" in conjuction with class names depending on the page and whether or not it was a page where a card could be flipped. It made things a lot easier than having four different card display components. 
 
 ```
-code snippet here
+function imgFlip() {
+
+    let randomNum = Math.random()
+    if (props.className === "oneSelect") {
+      return <div className="fade-in">
+        <h4>{props.name}</h4>
+        <img alt={props.name} src={props.image} />
+        <p>{props.summary}</p>
+      </div>
+    } else if (props.className === "allCards") {
+      return <div>
+        <img className="smallImg" alt={props.name} src={props.image} />
+      </div>
+    } else if (randomNum < .5) {
+      return <div className="fade-in">
+        <img alt={props.name} src={props.image} />
+        <p>{props.name}</p>
+        <p>{props.upright}</p>
+      </div>
+    } else {
+      return <div class="fade-in">
+        <img className="flipImg" alt={props.name} src={props.image} />
+        <p>{props.name}</p>
+        <p>Reversed: {props.reversed}</p>
+      </div>
+    }
+
+  }
 ```
 
 ### Code Issues & Resolutions
 
-> To be updated upon project completion. 
+> My biggest issues was maintaining state throughout the entire parent-child string since I had so many components that followed in a row, but once I figured out the best place for state in the parent component, it worked out a lot better.  
+
+> Also, because the API was an array of objects, it took a lot of un-DRY code to be able to pass down each individual key of info as a prop, as opposed to being able to just pass "data". I'll probably refactor this in the future. 
